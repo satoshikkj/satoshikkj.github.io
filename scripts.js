@@ -95,13 +95,15 @@ function atualizarContador() {
 setInterval(atualizarContador, 1000);
 atualizarContador();
 
-// BOTÃO "NÃO" FUGINDO
-const button = document.getElementById("no");
-const height = window.innerHeight - 50;
-const width = window.innerWidth - 50;
+// Botão "Não" foge ao passar o mouse
+window.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("no");
+  const height = window.innerHeight - 50;
+  const width = window.innerWidth - 100;
 
-button.addEventListener("mouseover", function () {
-  button.style.position = "absolute";
-  button.style.top = Math.random() * height + "px";
-  button.style.left = Math.random() * width + "px";
+  button.addEventListener("mouseover", function () {
+    button.style.position = "absolute";
+    button.style.top = Math.random() * height + "px";
+    button.style.left = Math.random() * width + "px";
+  });
 });
