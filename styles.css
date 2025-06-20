@@ -1,0 +1,179 @@
+:root {
+  --cor-fundo: #000;
+  --cor-texto: white;
+  --cor-destaque: #ff69b4;
+  --rosa-bebe: #ffcce6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  overflow: hidden;
+  font-family: 'Indie Flower', cursive;
+  color: var(--cor-texto);
+}
+
+h1 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-family: 'Great Vibes', cursive;
+  color: var(--cor-destaque);
+  cursor: pointer;
+  z-index: 10;
+  text-shadow: 0 0 20px var(--rosa-bebe), 0 0 40px var(--rosa-bebe);
+  animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% {
+    text-shadow: 0 0 20px var(--rosa-bebe), 0 0 40px var(--rosa-bebe);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--rosa-bebe), 0 0 20px var(--rosa-bebe);
+  }
+}
+
+#frases {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  text-align: center;
+  max-width: 90%;
+  z-index: 10;
+}
+
+.mensagem-clicada {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: var(--cor-destaque);
+  font-weight: bold;
+  display: none;
+  z-index: 10;
+}
+
+.teamo {
+  position: absolute;
+  top: -10%;
+  font-size: 1.1em;
+  color: var(--cor-destaque);
+  animation: descer linear infinite;
+  opacity: 0.4;
+  font-family: 'Press Start 2P', monospace;
+}
+
+@keyframes descer {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.coração-toque {
+  position: absolute;
+  font-size: 1.8em;
+  animation: subir 2s ease-out;
+}
+
+@keyframes subir {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.estrela {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: brilhar 2s infinite;
+  opacity: 0.5;
+}
+
+@keyframes brilhar {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.petala {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://i.ibb.co/svHHrVP/petala.png');
+  background-size: cover;
+  animation: cair linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#botoes {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+#botoes p {
+  font-size: 1em;
+  color: var(--cor-texto);
+  margin-bottom: 10px;
+}
+
+#botoes a {
+  display: block;
+  margin: 10px auto;
+  width: fit-content;
+  background-color: var(--cor-destaque);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--cor-destaque);
+  transition: all 0.3s;
+}
+
+#botoes a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+.vibrar {
+  animation: vibrar 0.2s;
+}
+
+@keyframes vibrar {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-1px); }
+}
+
+#contador {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9em;
+  color: var(--cor-texto);
+  text-align: center;
+  z-index: 10;
+  }
