@@ -29,12 +29,8 @@ h1 {
 }
 
 @keyframes pulsar {
-  0%, 100% {
-    text-shadow: 0 0 20px var(--rosa-bebe), 0 0 40px var(--rosa-bebe);
-  }
-  50% {
-    text-shadow: 0 0 10px var(--rosa-bebe), 0 0 20px var(--rosa-bebe);
-  }
+  0%, 100% { text-shadow: 0 0 20px var(--rosa-bebe), 0 0 40px var(--rosa-bebe); }
+  50% { text-shadow: 0 0 10px var(--rosa-bebe), 0 0 20px var(--rosa-bebe); }
 }
 
 #frases {
@@ -50,14 +46,26 @@ h1 {
 
 .mensagem-clicada {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 1.2em;
   color: var(--cor-destaque);
   font-weight: bold;
   display: none;
   z-index: 10;
+}
+
+#mensagem {
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#caixaMensagem {
+  top: 78%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 40px;
+  max-width: 90%;
+  text-align: center;
 }
 
 .teamo {
@@ -178,7 +186,6 @@ h1 {
   z-index: 10;
 }
 
-/* Adicionado: máquina de escrever cartinha */
 #carta {
   position: absolute;
   top: 54%;
@@ -221,18 +228,4 @@ h1 {
 
 #btnMensagem:hover {
   transform: scale(1.1);
-}
-
-#caixaMensagem {
-  position: absolute;
-  top: 78%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2em;
-  color: var(--cor-destaque);
-  font-weight: bold;
-  min-height: 40px;
-  max-width: 90%;
-  text-align: center;
-  z-index: 10;
 }
