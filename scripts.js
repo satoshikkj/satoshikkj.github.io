@@ -94,3 +94,14 @@ function atualizarContador() {
 }
 setInterval(atualizarContador, 1000);
 atualizarContador();
+
+// BOTÃO "NÃO" FUGINDO
+const button = document.getElementById("no");
+const height = window.innerHeight - 50;
+const width = window.innerWidth - 50;
+
+button.addEventListener("mouseover", function () {
+  button.style.position = "absolute";
+  button.style.top = Math.random() * height + "px";
+  button.style.left = Math.random() * width + "px";
+});
