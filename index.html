@@ -19,21 +19,6 @@
 
   <div class="mensagem-clicada" id="mensagem">vai procurar um emprego</div>
 
-  <!-- NOVO BLOCO: Me ama? + botões -->
-  <div class="interacao-amor" style="position: absolute; top: 80px; width: 100%; text-align: center; z-index: 10;">
-    <p>Me ama?</p>
-
-    <div class="buttons-container" style="margin: 10px auto;">
-      <div class="box">
-        <button>
-          <a href="https://link.com" target="_blank">Sim</a>
-        </button>
-        <button id="no">Não</button>
-      </div>
-    </div>
-  </div>
-  <!-- FIM BLOCO -->
-
   <div id="botoes">
     <p>Essa música me lembra você</p>
     <a href="https://youtu.be/ZkbuGPXJOPA?si=YPgH9mn3IfaMs9CK" target="_blank" onclick="vibrar(this)">🎵 Ouvir no YouTube</a>
@@ -41,6 +26,33 @@
 
   <div id="contador"></div>
 
+  <!-- Bloco "Me ama?" -->
+  <div style="margin-top: 60px; text-align: center;">
+    <p>Me ama?</p>
+    <div class="box">
+      <div class="buttons-container">
+        <a href="https://link.com">
+          <button>Sim</button>
+        </a>
+        <button id="no">Não</button>
+      </div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
+  <script>
+    // Faz o botão "Não" fugir do cursor
+    window.onload = function () {
+      const button = document.getElementById("no");
+      const height = window.innerHeight - 50;
+      const width = window.innerWidth - 50;
+
+      button.addEventListener("mouseover", function () {
+        button.style.position = "absolute";
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+      });
+    };
+  </script>
 </body>
 </html>
