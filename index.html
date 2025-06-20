@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Para Izys 💖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Pacifico&family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     :root {
       --cor-fundo: #000;
@@ -185,6 +185,34 @@
       text-align: center;
       z-index: 10;
     }
+
+    .polaroid {
+      display: inline-block;
+      background: white;
+      padding: 10px 10px 30px 10px;
+      margin: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 200px;
+      transform: rotate(-2deg);
+      border-radius: 5px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 3px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-family: 'Pacifico', cursive;
+      color: #000;
+      font-size: 1em;
+    }
   </style>
 </head>
 <body onclick="mostrarCoracoes(event)">
@@ -196,6 +224,17 @@
   <div id="botoes">
     <p>Essa música me lembra você</p>
     <a href="https://youtu.be/ZkbuGPXJOPA?si=YPgH9mn3IfaMs9CK" target="_blank" onclick="vibrar(this)">🎵 Ouvir no YouTube</a>
+  </div>
+
+  <div style="text-align:center; margin-top: 65vh; z-index: 5; position: relative;">
+    <div class="polaroid">
+      <img src="foto1.jpg" alt="Izys">
+      <div class="caption">Izys 💖</div>
+    </div>
+    <div class="polaroid">
+      <img src="foto2.jpg" alt="Nós dois">
+      <div class="caption">Momentos nossos</div>
+    </div>
   </div>
 
   <div id="contador"></div>
@@ -260,29 +299,19 @@
       }
     }
 
-    // Contador de dias e horas desde 13/12/2024
     function atualizarContador() {
       const inicio = new Date('2024-12-13T00:00:00');
       const agora = new Date();
       const diff = agora - inicio;
-
       const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
       const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutos = Math.floor((diff / (1000 * 60)) % 60);
-
       document.getElementById("contador").textContent =
         `Desde que nos conhecemos: ${dias} dias, ${horas} horas e ${minutos} minutos.`;
     }
     setInterval(atualizarContador, 1000);
     atualizarContador();
 
-    // Vibração
-    function vibrar(el) {
-      el.classList.add("vibrar");
-      setTimeout(() => el.classList.remove("vibrar"), 300);
-    }
-
-    // Pressionar por 3 segundos = abrir link surpresa
     let pressTimer;
     document.body.addEventListener("mousedown", () => {
       pressTimer = setTimeout(() => {
@@ -293,7 +322,11 @@
     document.body.addEventListener("mouseup", () => {
       clearTimeout(pressTimer);
     });
-  </script>
 
+    function vibrar(el) {
+      el.classList.add("vibrar");
+      setTimeout(() => el.classList.remove("vibrar"), 300);
+    }
+  </script>
 </body>
 </html>
