@@ -177,3 +177,62 @@ h1 {
   text-align: center;
   z-index: 10;
 }
+
+/* Adicionado: máquina de escrever cartinha */
+#carta {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3em;
+  max-width: 80%;
+  color: var(--cor-destaque);
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  z-index: 10;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--cor-destaque);
+  animation: piscar-cursor 1s steps(1) infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes piscar-cursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--cor-destaque); }
+}
+
+#btnMensagem {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: var(--cor-destaque);
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cor-destaque);
+  z-index: 10;
+  transition: transform 0.2s;
+}
+
+#btnMensagem:hover {
+  transform: scale(1.1);
+}
+
+#caixaMensagem {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: var(--cor-destaque);
+  font-weight: bold;
+  min-height: 40px;
+  max-width: 90%;
+  text-align: center;
+  z-index: 10;
+}
