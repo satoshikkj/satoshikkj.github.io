@@ -1,192 +1,320 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>InterFit Academia | Saúde, Força e Bem-Estar</title>
-  <link rel="icon" href="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header" role="banner">
-    <div class="container header-container">
-      <a href="#home" class="logo-link" aria-label="InterFit Academia Home">
-        <img
-          src="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico"
-          alt="Logo InterFit Academia"
-          class="logo"
-          width="50"
-          height="50"
-          loading="lazy"
-        />
-      </a>
-      <nav class="main-nav" role="navigation" aria-label="Menu principal">
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#planos" class="nav-link">Planos</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* styles.css */
 
-  <main>
-    <section id="home" class="hero-section" role="region" aria-label="Banner principal da InterFit">
-      <picture>
-        <source
-          media="(max-width: 768px)"
-          srcset="https://www.save-free.com/cdn/https://instagram.fmex43-1.fna.fbcdn.net/v/t51.2885-19/475063593_1192241882605435_2630999422634529632_n.jpg?_nc_ht=instagram.fmex43-1.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2QGlD87tpncIbU6qMNsPyuGrdNtUzMh_dL5T8TaNXWfZCwg_P3ELWSgX6uw3PilxWTU&_nc_ohc=9Tc3ocJHJdIQ7kNvwHTkJzZ&_nc_gid=1TJ8PhCrT-qaaEGaX9CLKQ&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfQ1qwHAnv0zz-8X2S7MVST-gn6Mmwjxoa7_G5a3-VrpeA&oe=686E6891&_nc_sid=1e20d2"
-        />
-        <img
-          src="https://www.save-free.com/cdn/https://instagram.fmex43-1.fna.fbcdn.net/v/t51.2885-19/475063593_1192241882605435_2630999422634529632_n.jpg?_nc_ht=instagram.fmex43-1.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2QGlD87tpncIbU6qMNsPyuGrdNtUzMh_dL5T8TaNXWfZCwg_P3ELWSgX6uw3PilxWTU&_nc_ohc=9Tc3ocJHJdIQ7kNvwHTkJzZ&_nc_gid=1TJ8PhCrT-qaaEGaX9CLKQ&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfQ1qwHAnv0zz-8X2S7MVST-gn6Mmwjxoa7_G5a3-VrpeA&oe=686E6891&_nc_sid=1e20d2"
-          alt="Imagem principal da academia InterFit com alunos treinando"
-          class="hero-image"
-          loading="lazy"
-          width="1200"
-          height="600"
-        />
-      </picture>
-      <div class="hero-text">
-        <h1>Bem-vindo à InterFit Academia</h1>
-        <p class="hero-subtitle">Força, Saúde e Bem-Estar para Você!</p>
-      </div>
-    </section>
+/* Reset e base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-    <section id="planos" class="plans-section" role="region" aria-label="Planos disponíveis">
-      <div class="container">
-        <h2 class="section-title">Escolha seu plano hoje!</h2>
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-        <article class="plan-card" role="article" aria-labelledby="plano-anual">
-          <h3 id="plano-anual" class="plan-title">Plano Anual</h3>
-          <p class="plan-price">R$147,00 <span class="per-month">por mês</span></p>
-          <p class="plan-total">Total: R$1.764,00 em até 12x</p>
+/* Container centralizado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
 
-          <button
-            class="btn btn-details"
-            aria-expanded="false"
-            aria-controls="detalhes-anual"
-            onclick="toggleDetalhes(this)"
-          >
-            Ver Detalhes
-          </button>
+/* Header */
+.site-header {
+  background-color: #8b0000; /* vermelho escuro */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
 
-          <a
-            href="https://wa.me/5591985075536"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-whatsapp"
-            aria-label="Entrar em contato pelo WhatsApp para o Plano Anual"
-          >
-            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
-          </a>
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
 
-          <div id="detalhes-anual" class="plan-details" hidden>
-            <p><strong>Vigência:</strong> Duração de 12 meses</p>
-            <p><strong>Descrição:</strong> Sem observações para esse item.</p>
-            <ul>
-              <li>2x Sessões: Avaliação física</li>
-              <li>Taxa de Matrícula Isenta</li>
-              <li>Sem Fidelidade</li>
-              <li>28% de Desconto</li>
-            </ul>
-          </div>
-        </article>
+.logo {
+  display: block;
+  max-height: 50px;
+  width: auto;
+}
 
-        <article class="plan-card" role="article" aria-labelledby="plano-recorrente1">
-          <h3 id="plano-recorrente1" class="plan-title">Plano Recorrente</h3>
-          <p class="plan-price">R$177,00 <span class="per-month">por mês</span></p>
+/* Navegação */
+.main-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
 
-          <button
-            class="btn btn-details"
-            aria-expanded="false"
-            aria-controls="detalhes-recorrente1"
-            onclick="toggleDetalhes(this)"
-          >
-            Ver Detalhes
-          </button>
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
 
-          <a
-            href="https://wa.me/5591985075536"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-whatsapp"
-            aria-label="Entrar em contato pelo WhatsApp para o Plano Recorrente"
-          >
-            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
-          </a>
+.nav-link:hover,
+.nav-link:focus {
+  color: #ff4c4c;
+}
 
-          <div id="detalhes-recorrente1" class="plan-details" hidden>
-            <ul>
-              <li>Não compromete o limite do cartão</li>
-              <li>Taxa de Matrícula Isenta</li>
-              <li>Sem Fidelidade</li>
-              <li>Recorrência mensal</li>
-            </ul>
-          </div>
-        </article>
+.nav-link:focus-visible {
+  outline: 2px solid #ff4c4c;
+  outline-offset: 3px;
+}
 
-        <article class="plan-card" role="article" aria-labelledby="plano-recorrente2">
-          <h3 id="plano-recorrente2" class="plan-title">Plano Recorrente</h3>
-          <p class="plan-price">R$177,00 <span class="per-month">por mês</span></p>
+/* Espaço para não ficar coberto pelo header fixo */
+main {
+  padding-top: 80px;
+}
 
-          <button
-            class="btn btn-details"
-            aria-expanded="false"
-            aria-controls="detalhes-recorrente2"
-            onclick="toggleDetalhes(this)"
-          >
-            Ver Detalhes
-          </button>
+/* Hero / Banner */
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
 
-          <a
-            href="https://wa.me/5591985075536"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-whatsapp"
-            aria-label="Entrar em contato pelo WhatsApp para o Plano Recorrente"
-          >
-            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
-          </a>
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 600px;
+  filter: brightness(0.65);
+  transition: filter 0.3s ease;
+}
 
-          <div id="detalhes-recorrente2" class="plan-details" hidden>
-            <ul>
-              <li>Não compromete o limite do cartão</li>
-              <li>Taxa de Matrícula Isenta</li>
-              <li>Sem Fidelidade</li>
-              <li>Recorrência mensal</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
+.hero-section:hover .hero-image,
+.hero-section:focus-within .hero-image {
+  filter: brightness(0.8);
+}
 
-    <section id="contato" class="contact-section" role="region" aria-label="Formulário e informações de contato">
-      <div class="container">
-        <h2 class="section-title">Fale Conosco</h2>
-        <p>Estamos prontos para te ajudar! Entre em contato via WhatsApp ou telefone.</p>
-        <a
-          href="https://wa.me/5591985075536"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-whatsapp contact-btn"
-          aria-label="Contato via WhatsApp"
-        >
-          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-        </a>
-        <p>Telefone: (91) 98507-5536</p>
-        <!-- Aqui você pode adicionar formulário de contato, mapa, etc -->
-      </div>
-    </section>
-  </main>
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-container">
-      <p>&copy; 2025 InterFit Academia. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
 
-  <script src="script.js" defer></script>
-</body>
-</html>
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Seção Planos */
+.plans-section {
+  background-color: #111;
+  padding: 3rem 0 4rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ff4c4c;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Cards de planos */
+.plan-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 0 25px rgba(255, 76, 76, 0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover,
+.plan-card:focus-within {
+  box-shadow: 0 0 40px rgba(255, 76, 76, 0.6);
+  transform: translateY(-8px);
+}
+
+.plan-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+  color: #ff4c4c;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.per-month {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.plan-total {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  color: #bbb;
+}
+
+.plan-details {
+  margin-top: 1.5rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.plan-details ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.75rem;
+}
+
+.plan-details li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.plan-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #25d366; /* verde whatsapp */
+  font-weight: 700;
+}
+
+/* Botões */
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+  margin-top: 1rem;
+}
+
+.btn-details {
+  background-color: #444;
+  color: #fff;
+  align-self: start;
+}
+
+.btn-details:hover,
+.btn-details:focus {
+  background-color: #666;
+  outline: none;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+  background-color: #1da851;
+  outline: none;
+}
+
+.btn-whatsapp i {
+  font-size: 1.2rem;
+}
+
+/* Seção Contato */
+.contact-section {
+  padding: 3rem 0;
+  background-color: #111;
+  text-align: center;
+  color: #ddd;
+}
+
+.contact-btn {
+  font-size: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #111;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+/* Layout responsivo */
+
+@media (min-width: 768px) {
+  .plans-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-list {
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .plan-card {
+    padding: 1.5rem 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
