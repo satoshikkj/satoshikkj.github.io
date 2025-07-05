@@ -1,4 +1,6 @@
-/* Base e reset */
+/* styles.css */
+
+/* Redefinir e base */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -13,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container */
+/* Contêiner centralizado */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,7 +29,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 999;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .header-container {
@@ -38,6 +40,7 @@ body {
 }
 
 .logo {
+  display: block;
   max-height: 50px;
   width: auto;
 }
@@ -47,8 +50,6 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-link {
@@ -56,6 +57,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
+  padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -65,12 +67,17 @@ body {
   color: #ff4c4c;
 }
 
-/* Espaçamento após header */
+.nav-link:focus-visible {
+  outline: 2px solid #ff4c4c;
+  outline-offset: 3px;
+}
+
+/* Espaço para não ficar coberto pelo cabeçalho fixo */
 main {
   padding-top: 80px;
 }
 
-/* Hero section */
+/* Hero / Banner */
 .hero-section {
   position: relative;
   text-align: center;
@@ -81,13 +88,15 @@ main {
 .hero-image {
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
   max-height: 600px;
   filter: brightness(0.65);
   transition: filter 0.3s ease;
 }
 
-.hero-section:hover .hero-image {
+.hero-section:hover .hero-image,
+.hero-section:focus-within .hero-image {
   filter: brightness(0.8);
 }
 
@@ -96,8 +105,9 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 90%;
+  padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
   border-radius: 10px;
 }
 
@@ -105,7 +115,7 @@ main {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
 }
 
 .hero-subtitle {
@@ -113,13 +123,13 @@ main {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-/* Seção de planos */
+/* Seção Planos */
 .plans-section {
   background-color: #111;
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
 }
 
 .section-title {
@@ -132,6 +142,7 @@ main {
   letter-spacing: 2px;
 }
 
+/* Cartões de planos */
 .plan-card {
   background-color: #1a1a1a;
   border-radius: 12px;
@@ -140,6 +151,7 @@ main {
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -151,17 +163,17 @@ main {
 
 .plan-title {
   font-size: 1.75rem;
-  font-weight: 700;
-  color: #ff4c4c;
   margin-bottom: 0.25rem;
+  color: #ff4c4c;
+  font-weight: 700;
   letter-spacing: 1.2px;
 }
 
 .plan-price {
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
   margin-bottom: 0.25rem;
+  color: #fff;
 }
 
 .per-month {
@@ -173,15 +185,14 @@ main {
 .plan-total {
   font-size: 1rem;
   font-weight: 400;
-  color: #bbb;
   margin-bottom: 1.25rem;
+  color: #bbb;
 }
 
 .plan-details {
   margin-top: 1.5rem;
   color: #ddd;
   line-height: 1.5;
-  display: none;
 }
 
 .plan-details ul {
@@ -226,12 +237,13 @@ main {
 .btn-details {
   background-color: #444;
   color: #fff;
-  align-self: flex-start;
+  align-self: start;
 }
 
 .btn-details:hover,
 .btn-details:focus {
   background-color: #666;
+  outline: none;
 }
 
 .btn-whatsapp {
@@ -242,13 +254,14 @@ main {
 .btn-whatsapp:hover,
 .btn-whatsapp:focus {
   background-color: #1da851;
+  outline: none;
 }
 
 .btn-whatsapp i {
   font-size: 1.2rem;
 }
 
-/* Seção de Contato */
+/* Seção Contato */
 .contact-section {
   padding: 3rem 0;
   background-color: #111;
@@ -271,7 +284,7 @@ main {
   border-top: 1px solid #222;
 }
 
-/* Responsivo */
+/* Layout responsivo */
 @media (min-width: 768px) {
   .plans-section .container {
     display: grid;
