@@ -4,9 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InterFit Academia | Saúde, Força e Bem-Estar</title>
+
+  <!-- ✅ Segurança: Proteção contra clickjacking -->
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+
+  <!-- ✅ Segurança: Política de carregamento de conteúdo -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.gstatic.com; script-src 'self' https://kit.fontawesome.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';">
+
+  <!-- ✅ Segurança: Bloquear indexação por mecanismos de busca (remova se quiser indexar no Google) -->
+  <meta name="robots" content="noindex, nofollow" />
+
   <link rel="icon" href="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ⚠️ Font Awesome confiável, com defer -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
