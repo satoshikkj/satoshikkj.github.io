@@ -1,109 +1,103 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: black;
-  color: white;
-  font-family: 'Indie Flower', cursive;
-  overflow-x: hidden;
-}
-
-#izys {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  text-align: center;
-  margin-top: 40px;
-  color: pink;
-  cursor: pointer;
-}
-
-#frases,
-#carta,
-#contador {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
-
-#btnMensagem {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-family: 'Press Start 2P', cursive;
-  cursor: pointer;
-}
-
-#caixaMensagem,
-#mensagem {
-  text-align: center;
-  display: none;
-  font-size: 1.2rem;
-  margin-top: 15px;
-}
-
-#botoes {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#botoes a {
-  color: #ff66cc;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.estrela {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: white;
-  animation: piscar 2s infinite alternate;
-}
-
-@keyframes piscar {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.teamo {
-  position: absolute;
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: 'Montserrat', sans-serif; background: #000; color: #fff; line-height: 1.6;}
+header {
+  background: #8b0000;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
   top: 0;
-  font-size: 1rem;
-  color: #ff66cc;
-  animation: cair linear;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-@keyframes cair {
-  to {
-    transform: translateY(100vh);
-    opacity: 0;
+header img {height: 40px;}
+nav a {
+  color: #fff;
+  margin-left: 2rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {color: #ff5252;}
+.banner img {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.section-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.planos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.plano {
+  background: #111;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(255,0,0,0.2);
+  position: relative;
+}
+.plano h3 {
+  color: #ff4c4c;
+  margin-bottom: 0.5rem;
+}
+.plano .preco {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.plano ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.plano ul li {
+  margin-bottom: 0.5rem;
+}
+.plano button,
+.whatsapp-btn {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-right: 0.5rem;
+}
+.plano button:hover,
+.whatsapp-btn:hover {
+  background: #1da851;
+}
+.detalhes {
+  display: none;
+  margin-top: 1rem;
+}
+.ver-detalhes {
+  background: #444;
+  margin-top: 1rem;
+}
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  nav a {
+    margin: 0 1rem;
+    font-size: 0.9rem;
   }
-}
-
-.coração-toque {
-  position: absolute;
-  pointer-events: none;
-  font-size: 24px;
-  animation: subir 2s ease-out forwards;
-}
-
-@keyframes subir {
-  to {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
-.vibrar {
-  animation: vibrar 0.3s;
-}
-
-@keyframes vibrar {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-2px); }
-  50% { transform: translateX(2px); }
-  75% { transform: translateX(-2px); }
 }
