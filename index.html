@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InterFit Academia | Saúde, Força e Bem-Estar</title>
 
-  <!-- ✅ Segurança: Proteção contra clickjacking -->
+  <!-- Segurança -->
   <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
-
-  <!-- ✅ Segurança: Política de carregamento de conteúdo -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.gstatic.com; script-src 'self' https://kit.fontawesome.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';">
-
-  <!-- ✅ Segurança: Bloquear indexação por mecanismos de busca (remova se quiser indexar no Google) -->
   <meta name="robots" content="noindex, nofollow" />
 
+  <!-- Favicon e fontes -->
   <link rel="icon" href="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- ⚠️ Font Awesome confiável, com defer -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
 
+  <!-- Estilo -->
   <link rel="stylesheet" href="styles.css" />
+  <!-- JavaScript externo com defer -->
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <header class="site-header" role="banner">
     <div class="container header-container">
@@ -48,10 +47,9 @@
   <main>
     <section id="home" class="hero-section" role="region" aria-label="Banner principal da InterFit">
       <picture>
-  <source media="(max-width: 768px)" srcset="..." />
-  <img src="URL_PARA_DESKTOP" alt="Banner InterFit" />
+        <source media="(max-width: 768px)" srcset="..." />
+        <img src="URL_PARA_DESKTOP" alt="Banner InterFit" />
       </picture>
- 
       <div class="hero-text">
         <h1>Bem-vindo à InterFit Academia</h1>
         <p class="hero-subtitle">Força, Saúde e Bem-Estar para Você!</p>
