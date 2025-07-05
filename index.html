@@ -17,8 +17,6 @@
 
   <!-- Estilo -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- JavaScript externo com defer -->
-  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -185,5 +183,33 @@
       <p>&copy; 2025 InterFit Academia. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <!-- Script para funcionamento dos botões Ver/Ocultar Detalhes -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const detailButtons = document.querySelectorAll(".btn-details");
+
+      detailButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const detalhesId = button.getAttribute("aria-controls");
+          const detalhesEl = document.getElementById(detalhesId);
+
+          if (!detalhesEl) return;
+
+          const isHidden = detalhesEl.hasAttribute("hidden");
+
+          if (isHidden) {
+            detalhesEl.removeAttribute("hidden");
+            button.setAttribute("aria-expanded", "true");
+            button.textContent = "Ocultar Detalhes";
+          } else {
+            detalhesEl.setAttribute("hidden", "");
+            button.setAttribute("aria-expanded", "false");
+            button.textContent = "Ver Detalhes";
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
