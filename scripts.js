@@ -1,17 +1,13 @@
-// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const detailButtons = document.querySelectorAll(".btn-details");
 
-function toggleDetalhes(button) {
-  const detalhesId = button.getAttribute("aria-controls");
-  const detalhes = document.getElementById(detalhesId);
+  detailButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const details = button.nextElementSibling;
+      const isVisible = details.style.display === "block";
 
-  const isExpanded = button.getAttribute("aria-expanded") === "true";
-  button.setAttribute("aria-expanded", !isExpanded);
-
-  if (isExpanded) {
-    detalhes.hidden = true;
-    button.textContent = "Ver Detalhes";
-  } else {
-    detalhes.hidden = false;
-    button.textContent = "Ocultar Detalhes";
-  }
-}
+      details.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Ver Detalhes" : "Ocultar Detalhes";
+    });
+  });
+});
