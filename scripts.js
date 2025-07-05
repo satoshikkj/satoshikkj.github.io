@@ -1,10 +1,13 @@
-function toggleDetalhes(button) {
-  const detalhes = button.nextElementSibling.nextElementSibling;
-  if (detalhes.style.display === "block") {
-    detalhes.style.display = "none";
-    button.textContent = "Ver Detalhes";
-  } else {
-    detalhes.style.display = "block";
-    button.textContent = "Ocultar Detalhes";
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const detailButtons = document.querySelectorAll(".btn-details");
+
+  detailButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const details = button.nextElementSibling;
+      const isVisible = details.style.display === "block";
+
+      details.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Ver Detalhes" : "Ocultar Detalhes";
+    });
+  });
+});
