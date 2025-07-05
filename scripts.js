@@ -3,11 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   detailButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const details = button.nextElementSibling;
-      const isVisible = details.style.display === "block";
+      const detalhesId = button.getAttribute("aria-controls");
+      const detalhesEl = document.getElementById(detalhesId);
 
-      details.style.display = isVisible ? "none" : "block";
-      button.textContent = isVisible ? "Ver Detalhes" : "Ocultar Detalhes";
+      if (!detalhesEl) return;
+
+      const isHidden = detalhesEl.hasAttribute("hidden");
+
+      if (isHidden) {
+        detalhesEl.removeAttribute("hidden");
+        button.setAttribute("aria-expanded", "true");
+        button.textContent = "Ocultar Detalhes";
+      } else {
+        detalhesEl.setAttribute("hidden", "");
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "Ver Detalhes";
+      }
     });
   });
 });
