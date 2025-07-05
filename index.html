@@ -1,31 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para Izys 💖</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InterFit Academia</title>
+  <link rel="icon" href="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body onclick="mostrarCoracoes(event)">
+<body>
+  <header>
+    <img src="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico" alt="InterFit Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-  <h1 id="izys" onclick="mostrarMensagem()">Izys</h1>
+  <section class="banner" id="home">
+    <img src="https://www.save-free.com/cdn/https://instagram.fmex43-1.fna.fbcdn.net/v/t51.2885-19/475063593_1192241882605435_2630999422634529632_n.jpg?_nc_ht=instagram.fmex43-1.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2QGlD87tpncIbU6qMNsPyuGrdNtUzMh_dL5T8TaNXWfZCwg_P3ELWSgX6uw3PilxWTU&_nc_ohc=9Tc3ocJHJdIQ7kNvwHTkJzZ&_nc_gid=1TJ8PhCrT-qaaEGaX9CLKQ&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfQ1qwHAnv0zz-8X2S7MVST-gn6Mmwjxoa7_G5a3-VrpeA&oe=686E6891&_nc_sid=1e20d2" alt="Banner InterFit">
+  </section>
 
-  <div id="frases"></div>
-  <div id="carta"></div>
+  <section class="container" id="planos">
+    <h2 class="section-title">Escolha seu plano hoje!</h2>
+    <div class="planos">
 
-  <button id="btnMensagem">Não clique aqui</button>
-  <div id="caixaMensagem"></div>
+      <!-- Plano Anual -->
+      <div class="plano">
+        <h3>Plano Anual</h3>
+        <p class="preco">R$147,00/mês (R$1.764,00 em até 12x)</p>
+        <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
+        <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> EU QUERO</a>
+        <div class="detalhes">
+          <p><strong>Vigência:</strong> 12 meses</p>
+          <p><strong>Descrição:</strong> Sem observações para esse item.</p>
+          <ul>
+            <li>✅ 2x Avaliações físicas</li>
+            <li>🎯 Taxa de matrícula isenta</li>
+            <li>🎁 Sem fidelidade</li>
+            <li>💸 28% de desconto</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="mensagem-clicada" id="mensagem">vai procurar um emprego</div>
+      <!-- Plano Recorrente 1 -->
+      <div class="plano">
+        <h3>Plano Recorrente</h3>
+        <p class="preco">R$177,00/mês</p>
+        <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
+        <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> EU QUERO</a>
+        <div class="detalhes">
+          <ul>
+            <li>✅ Não compromete o limite do cartão</li>
+            <li>🎯 Taxa de matrícula isenta</li>
+            <li>🎁 Sem fidelidade</li>
+            <li>🔁 Recorrência mensal</li>
+          </ul>
+        </div>
+      </div>
 
-  <div id="botoes">
-    <p>Essa música me lembra você</p>
-    <a href="https://youtu.be/ZkbuGPXJOPA?si=YPgH9mn3IfaMs9CK" target="_blank" onclick="vibrar(this)">🎵 Ouvir no YouTube</a>
-  </div>
+      <!-- Plano Recorrente 2 -->
+      <div class="plano">
+        <h3>Plano Recorrente</h3>
+        <p class="preco">R$177,00/mês</p>
+        <button class="ver-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
+        <a href="https://wa.me/5591985075536" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> EU QUERO</a>
+        <div class="detalhes">
+          <ul>
+            <li>✅ Não compromete o limite do cartão</li>
+            <li>🎯 Taxa de matrícula isenta</li>
+            <li>🎁 Sem fidelidade</li>
+            <li>🔁 Recorrência mensal</li>
+          </ul>
+        </div>
+      </div>
 
-  <div id="contador"></div>
+    </div>
+  </section>
 
-  <script src="scripts.js"></script>
+  <footer>
+    <p>&copy; 2025 InterFit Academia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
