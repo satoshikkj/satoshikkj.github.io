@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isHidden) {
         detalhesEl.removeAttribute("hidden");
         button.setAttribute("aria-expanded", "true");
-        button.textContent = "Ocultar Detalhes";
+        button.innerHTML = 'Ocultar Detalhes'; // ou incluir ícone: '<i class="icon-class"></i> Ocultar Detalhes'
       } else {
         detalhesEl.setAttribute("hidden", "");
         button.setAttribute("aria-expanded", "false");
-        button.textContent = "Ver Detalhes";
+        button.innerHTML = 'Ver Detalhes'; // idem aqui se quiser ícone
       }
     });
   });
