@@ -1,4 +1,6 @@
-/* ==================== RESET & BASE ==================== */
+/* styles.css */
+
+/* Redefinir e base */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -13,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ==================== BOTÕES ==================== */
+/* Botões - melhoria visual */
 .btn {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -47,11 +49,11 @@ body {
 }
 
 .btn-details[aria-expanded="true"] {
-  background-color: #28a745;
+  background-color: #28a745; /* verde para indicar que os detalhes estão visíveis */
 }
 
 .btn-details[aria-expanded="false"] {
-  background-color: #dc3545;
+  background-color: #dc3545; /* vermelho para indicar que os detalhes estão ocultos */
 }
 
 .btn-whatsapp {
@@ -69,29 +71,14 @@ body {
   font-size: 1.2rem;
 }
 
-.btn-glow {
-  background-color: #ff4c4c;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ff4c4c, 0 0 40px #ff4c4c66;
-  transition: box-shadow 0.3s ease;
-}
-
-.btn-glow:hover {
-  box-shadow: 0 0 20px #ff4c4c, 0 0 60px #ff4c4caa;
-}
-
-/* ==================== CONTAINER ==================== */
+/* Contêiner centralizado */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* ==================== HEADER ==================== */
+/* Cabeçalho */
 .site-header {
   background-color: #d3d3d3;
   position: fixed;
@@ -114,7 +101,7 @@ body {
   width: auto;
 }
 
-/* ==================== NAV ==================== */
+/* Navegação */
 .main-nav .nav-list {
   list-style: none;
   display: flex;
@@ -141,11 +128,12 @@ body {
   outline-offset: 3px;
 }
 
-/* ==================== HERO ==================== */
+/* Espaço para não ficar coberto pelo cabeçalho fixo */
 main {
   padding-top: 80px;
 }
 
+/* Hero / Banner */
 .hero-section {
   position: relative;
   text-align: center;
@@ -156,6 +144,7 @@ main {
 .hero-image {
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
   max-height: 600px;
   filter: brightness(0.65);
@@ -193,7 +182,7 @@ main {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-/* ==================== PLANS ==================== */
+/* Seção Planos */
 .plans-section {
   background-color: #111;
   padding: 3rem 0 4rem;
@@ -209,13 +198,16 @@ main {
   letter-spacing: 2px;
 }
 
+/* Cartões de planos */
 .plan-card {
   background-color: #1a1a1a;
   border-radius: 12px;
   padding: 2rem 2.5rem;
   box-shadow: 0 0 25px rgba(255, 76, 76, 0.3);
+  color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeSlideUp 1s ease forwards;
   opacity: 0;
@@ -243,11 +235,14 @@ main {
   margin-bottom: 0.25rem;
   color: #ff4c4c;
   font-weight: 700;
+  letter-spacing: 1.2px;
 }
 
 .plan-price {
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #fff;
 }
 
 .per-month {
@@ -293,7 +288,62 @@ main {
   display: none;
 }
 
-/* ==================== TESTIMONIALS ==================== */
+/* Seção Contato */
+.contact-section {
+  padding: 3rem 0;
+  background-color: #111;
+  text-align: center;
+  color: #ddd;
+}
+
+.contact-btn {
+  font-size: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+/* Rodapé */
+.site-footer {
+  background-color: #111;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+/* Layout responsivo */
+@media (min-width: 768px) {
+  .plans-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-list {
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .plan-card {
+    padding: 1.5rem 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Seção Depoimentos */
 .testimonials-section {
   background-color: #000;
   padding: 4rem 1.5rem;
@@ -330,272 +380,4 @@ main {
   margin-top: 1rem;
   font-weight: 600;
   color: #25d366;
-}
-
-/* ==================== RODAPÉ ==================== */
-.site-footer {
-  background-color: #111;
-  color: #666;
-  font-size: 0.9rem;
-  padding: 1rem 0;
-  text-align: center;
-  border-top: 1px solid #222;
-}
-
-/* ==================== RESPONSIVO ==================== */
-@media (min-width: 768px) {
-  .plans-section .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .nav-list {
-    justify-content: center;
-  }
-
-  .hero-text h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .plan-card {
-    padding: 1.5rem 1.8rem;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* ==================== EXTRAS / COMPONENTES ==================== */
-.loader {
-  border: 5px solid #333;
-  border-top: 5px solid var(--highlight, #ff4c4c);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  margin: 2rem auto;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-
-.modal {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 500px;
-  color: #fff;
-  box-shadow: 0 0 40px rgba(255, 76, 76, 0.5);
-  animation: zoomIn 0.4s ease-out;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.6); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  perspective: 1000px;
-  margin: auto;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s ease;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  background-color: #111;
-  padding: 1rem;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-  background-color: #222;
-}
-
-.slider-container {
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  position: relative;
-}
-
-.slider-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slide {
-  flex: 0 0 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 2rem;
-  background: #1a1a1a;
-  color: #fff;
-}
-
-.slider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ff4c4c;
-  color: white;
-  border: none;
-  padding: 0.6rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-}
-
-.slider-button:hover {
-  background: #b50b0b;
-}
-
-.slider-button.prev { left: 10px; }
-.slider-button.next { right: 10px; }
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: help;
-}
-
-.tooltip .tooltip-text {
-  visibility: hidden;
-  width: max-content;
-  max-width: 300px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: all 0.4s ease;
-  font-size: 0.9rem;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-  bottom: 140%;
-}
-
-.stars {
-  display: flex;
-  gap: 0.4rem;
-  font-size: 1.5rem;
-  color: #ccc;
-  justify-content: center;
-}
-
-.stars .star:hover,
-.stars .star.hovered,
-.stars .star.selected {
-  color: #ffc107;
-  cursor: pointer;
-}
-
-[data-theme="dark"] {
-  --bg-color: #000;
-  --text-color: #fff;
-  --card-bg: #1a1a1a;
-  --accent: #ff4c4c;
-}
-
-[data-theme="light"] {
-  --bg-color: #fff;
-  --text-color: #000;
-  --card-bg: #f9f9f9;
-  --accent: #e60023;
-}
-
-body[data-theme] {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-.floating-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 1rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-}
-
-.floating-whatsapp:hover {
-  background: #1da851;
-}
-
-.bounce {
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.pulse {
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
     }
