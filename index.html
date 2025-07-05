@@ -10,63 +10,17 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Loader Giratório -->
-  <div class="loader"></div>
-
-  <!-- Modal -->
-  <button class="btn btn-glow" id="openModal">Abrir Modal</button>
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal">
-      <h2>Bem-vindo!</h2>
-      <p>Este é um modal com efeito de zoom.</p>
-      <button class="btn btn-details" id="closeModal">Fechar</button>
-    </div>
-  </div>
-
-  <!-- Flip Card -->
-  <div class="flip-card">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <h3>Frente</h3>
-        <p>Clique para virar</p>
-      </div>
-      <div class="flip-card-back">
-        <h3>Verso</h3>
-        <p>Mais informações aqui!</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Slider/Carrossel -->
-  <div class="slider-container">
-    <button class="slider-button prev" id="prevBtn">&#10094;</button>
-    <div class="slider-wrapper" id="sliderWrapper">
-      <div class="slide">Slide 1</div>
-      <div class="slide">Slide 2</div>
-      <div class="slide">Slide 3</div>
-    </div>
-    <button class="slider-button next" id="nextBtn">&#10095;</button>
-  </div>
-
-  <!-- Tooltip -->
-  <p class="tooltip">Passe o mouse aqui
-    <span class="tooltip-text">Texto do tooltip animado!</span>
-  </p>
-
-  <!-- Estrelas de Avaliação -->
-  <div class="stars" id="ratingStars">
-    <span class="star" data-value="1">&#9733;</span>
-    <span class="star" data-value="2">&#9733;</span>
-    <span class="star" data-value="3">&#9733;</span>
-    <span class="star" data-value="4">&#9733;</span>
-    <span class="star" data-value="5">&#9733;</span>
-  </div>
-
   <header class="site-header" role="banner">
     <div class="container header-container">
       <a href="#home" class="logo-link" aria-label="InterFit Academia Home">
-        <img src="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico" alt="Logo InterFit Academia" class="logo" width="50" height="50" loading="lazy"/>
+        <img
+          src="https://w12evostorage.w12app.com.br/evo/fotos/35748/logos/2/38e945ff-7651-4dfb-8c25-58cad45746c4.ico"
+          alt="Logo InterFit Academia"
+          class="logo"
+          width="50"
+          height="50"
+          loading="lazy"
+        />
       </a>
       <nav class="main-nav" role="navigation" aria-label="Menu principal">
         <ul class="nav-list">
@@ -79,10 +33,20 @@
   </header>
 
   <main>
-    <section id="home" class="hero-section">
+    <section id="home" class="hero-section" role="region" aria-label="Banner principal da InterFit">
       <picture>
-        <source media="(max-width: 768px)" srcset="https://satoshikkj.github.io/ChatGPT-Image-13-de-jun.-de-2025-15_19_50-r79cz2w6x8fq137sglmay6w2v4hezve2qlyqp196fk.png" />
-        <img src="https://satoshikkj.github.io/ChatGPT-Image-13-de-jun.-de-2025-15_19_50-r79cz2w6x8fq137sglmay6w2v4hezve2qlyqp196fk.png" alt="Banner da Interfit" class="hero-image" loading="lazy" width="1200" height="600" />
+        <source
+          media="(max-width: 768px)"
+          srcset="https://satoshikkj.github.io/ChatGPT-Image-13-de-jun.-de-2025-15_19_50-r79cz2w6x8fq137sglmay6w2v4hezve2qlyqp196fk.png"
+        />
+        <img
+          src="https://satoshikkj.github.io/ChatGPT-Image-13-de-jun.-de-2025-15_19_50-r79cz2w6x8fq137sglmay6w2v4hezve2qlyqp196fk.png"
+          alt="Banner da Interfit"
+          class="hero-image"
+          loading="lazy"
+          width="1200"
+          height="600"
+        />
       </picture>
       <div class="hero-text">
         <h1>InterFit Academia</h1>
@@ -90,20 +54,36 @@
       </div>
     </section>
 
-    <section id="planos" class="plans-section">
+    <section id="planos" class="plans-section" role="region" aria-label="Planos disponíveis">
       <div class="container">
         <h2 class="section-title">Escolha seu plano hoje!</h2>
 
-        <!-- Cards de planos -->
-        <!-- Plano Anual -->
-        <article class="plan-card">
-          <h3>Plano Anual</h3>
+        <article class="plan-card" role="article" aria-labelledby="plano-anual">
+          <h3 id="plano-anual" class="plan-title">Plano Anual</h3>
           <p class="plan-price">R$147,00 <span class="per-month">por mês</span></p>
           <p class="plan-total">Total: R$1.764,00 em até 12x</p>
-          <button class="btn btn-details" aria-expanded="false" aria-controls="detalhes-anual">Ver Detalhes</button>
-          <a href="https://wa.me/5591985075536" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Eu Quero</a>
+
+          <button
+            class="btn btn-details"
+            aria-expanded="false"
+            aria-controls="detalhes-anual"
+          >
+            Ver Detalhes
+          </button>
+
+          <a
+            href="https://wa.me/5591985075536"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            aria-label="Entrar em contato pelo WhatsApp para o Plano Anual"
+          >
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
+          </a>
+
           <div id="detalhes-anual" class="plan-details" hidden>
             <p><strong>Vigência:</strong> Duração de 12 meses</p>
+            <p><strong>Descrição:</strong> Sem observações para esse item.</p>
             <ul>
               <li>2x Sessões: Avaliação física</li>
               <li>Taxa de Matrícula Isenta</li>
@@ -113,14 +93,31 @@
           </div>
         </article>
 
-        <!-- Plano Recorrente 1 -->
-        <article class="plan-card">
-          <h3>Plano Recorrente</h3>
+        <article class="plan-card" role="article" aria-labelledby="plano-recorrente1">
+          <h3 id="plano-recorrente1" class="plan-title">Plano Recorrente</h3>
           <p class="plan-price">R$177,00 <span class="per-month">por mês</span></p>
-          <button class="btn btn-details" aria-expanded="false" aria-controls="detalhes-recorrente1">Ver Detalhes</button>
-          <a href="https://wa.me/5591985075536" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Eu Quero</a>
+
+          <button
+            class="btn btn-details"
+            aria-expanded="false"
+            aria-controls="detalhes-recorrente1"
+          >
+            Ver Detalhes
+          </button>
+
+          <a
+            href="https://wa.me/5591985075536"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            aria-label="Entrar em contato pelo WhatsApp para o Plano Recorrente"
+          >
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
+          </a>
+
           <div id="detalhes-recorrente1" class="plan-details" hidden>
             <p><strong>Vigência:</strong> Recorrência mensal</p>
+            <p><strong>Descrição:</strong> Sem observações para esse item.</p>
             <ul>
               <li>Não compromete o limite do cartão</li>
               <li>Taxa de Matrícula Isenta</li>
@@ -129,14 +126,31 @@
           </div>
         </article>
 
-        <!-- Plano Recorrente 2 -->
-        <article class="plan-card">
-          <h3>Plano Recorrente</h3>
+        <article class="plan-card" role="article" aria-labelledby="plano-recorrente2">
+          <h3 id="plano-recorrente2" class="plan-title">Plano Recorrente</h3>
           <p class="plan-price">R$177,00 <span class="per-month">por mês</span></p>
-          <button class="btn btn-details" aria-expanded="false" aria-controls="detalhes-recorrente2">Ver Detalhes</button>
-          <a href="https://wa.me/5591985075536" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Eu Quero</a>
+
+          <button
+            class="btn btn-details"
+            aria-expanded="false"
+            aria-controls="detalhes-recorrente2"
+          >
+            Ver Detalhes
+          </button>
+
+          <a
+            href="https://wa.me/5591985075536"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            aria-label="Entrar em contato pelo WhatsApp para o Plano Recorrente"
+          >
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
+          </a>
+
           <div id="detalhes-recorrente2" class="plan-details" hidden>
             <p><strong>Vigência:</strong> Duração de 1 mês</p>
+            <p><strong>Descrição:</strong> Sem observações para esse item.</p>
             <ul>
               <li>Taxa de Matrícula Isenta</li>
               <li>Sem Fidelidade</li>
@@ -146,79 +160,59 @@
       </div>
     </section>
 
-    <section id="contato" class="contact-section">
+    <section id="contato" class="contact-section" role="region" aria-label="Formulário e informações de contato">
       <div class="container">
         <h2 class="section-title">Fale Conosco</h2>
         <p>Estamos prontos para te ajudar! Entre em contato via WhatsApp.</p>
-        <a href="https://wa.me/5591985075536" class="btn btn-whatsapp contact-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a
+          href="https://wa.me/5591985075536"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-whatsapp contact-btn"
+          aria-label="Contato via WhatsApp"
+        >
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+        </a>
         <p>Telefone: (91) 98507-5536</p>
+        <!-- Aqui você pode adicionar formulário de contato, mapa, etc -->
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-container">
       <p>&copy; 2025 InterFit Academia. Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const detailButtons = document.querySelectorAll(".btn-details");
-      detailButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const detalhesId = button.getAttribute("aria-controls");
-          const detalhesEl = document.getElementById(detalhesId);
-          if (!detalhesEl) return;
-          const isHidden = detalhesEl.hasAttribute("hidden");
-          detalhesEl.toggleAttribute("hidden");
-          button.setAttribute("aria-expanded", String(!isHidden));
-          button.textContent = isHidden ? "Ocultar Detalhes" : "Ver Detalhes";
-        });
-      });
+  document.addEventListener("DOMContentLoaded", () => {
+    const detailButtons = document.querySelectorAll(".btn-details");
 
-      const openModal = document.getElementById("openModal");
-      const closeModal = document.getElementById("closeModal");
-      const modalOverlay = document.getElementById("modalOverlay");
+    detailButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const detalhesId = button.getAttribute("aria-controls");
+        const detalhesEl = document.getElementById(detalhesId);
 
-      openModal.addEventListener("click", () => {
-        modalOverlay.style.display = "flex";
-      });
-
-      closeModal.addEventListener("click", () => {
-        modalOverlay.style.display = "none";
-      });
-
-      const slider = document.getElementById("sliderWrapper");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      let currentIndex = 0;
-
-      nextBtn.addEventListener("click", () => {
-        if (currentIndex < 2) {
-          currentIndex++;
-          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (!detalhesEl) {
+          console.warn(`Elemento com id '${detalhesId}' não encontrado.`);
+          return;
         }
-      });
 
-      prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        const isHidden = detalhesEl.hasAttribute("hidden");
+
+        if (isHidden) {
+          detalhesEl.removeAttribute("hidden");
+          button.setAttribute("aria-expanded", "true");
+          button.textContent = "Ocultar Detalhes";
+        } else {
+          detalhesEl.setAttribute("hidden", "");
+          button.setAttribute("aria-expanded", "false");
+          button.textContent = "Ver Detalhes";
         }
-      });
-
-      const stars = document.querySelectorAll(".star");
-      stars.forEach((star) => {
-        star.addEventListener("click", () => {
-          const rating = parseInt(star.getAttribute("data-value"));
-          stars.forEach((s, i) => {
-            s.style.color = i < rating ? "gold" : "#ccc";
-          });
-        });
       });
     });
+  });
   </script>
 </body>
-</html>
+          </html>
