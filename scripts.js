@@ -6,18 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const detalhesId = button.getAttribute("aria-controls");
       const detalhesEl = document.getElementById(detalhesId);
 
-      if (!detalhesEl) return;
+      if (!detalhesEl) {
+        console.warn(`Elemento com id '${detalhesId}' não encontrado.`);
+        return;
+      }
 
       const isHidden = detalhesEl.hasAttribute("hidden");
 
       if (isHidden) {
         detalhesEl.removeAttribute("hidden");
         button.setAttribute("aria-expanded", "true");
-        button.innerHTML = 'Ocultar Detalhes'; // ou incluir ícone: '<i class="icon-class"></i> Ocultar Detalhes'
+        button.textContent = "Ocultar Detalhes";
       } else {
         detalhesEl.setAttribute("hidden", "");
         button.setAttribute("aria-expanded", "false");
-        button.innerHTML = 'Ver Detalhes'; // idem aqui se quiser ícone
+        button.textContent = "Ver Detalhes";
       }
     });
   });
