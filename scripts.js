@@ -1,13 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const detailButtons = document.querySelectorAll(".btn-details");
+// script.js
 
-  detailButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const details = button.nextElementSibling;
-      const isVisible = details.style.display === "block";
+function toggleDetalhes(button) {
+  const detalhesId = button.getAttribute("aria-controls");
+  const detalhes = document.getElementById(detalhesId);
 
-      details.style.display = isVisible ? "none" : "block";
-      button.textContent = isVisible ? "Ver Detalhes" : "Ocultar Detalhes";
-    });
-  });
-});
+  const isExpanded = button.getAttribute("aria-expanded") === "true";
+  button.setAttribute("aria-expanded", !isExpanded);
+
+  if (isExpanded) {
+    detalhes.hidden = true;
+    button.textContent = "Ver Detalhes";
+  } else {
+    detalhes.hidden = false;
+    button.textContent = "Ocultar Detalhes";
+  }
+}
