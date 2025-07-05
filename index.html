@@ -59,7 +59,6 @@
             class="btn btn-details"
             aria-expanded="false"
             aria-controls="detalhes-anual"
-            onclick="toggleDetalhes(this)"
           >
             Ver Detalhes
           </button>
@@ -94,7 +93,6 @@
             class="btn btn-details"
             aria-expanded="false"
             aria-controls="detalhes-recorrente1"
-            onclick="toggleDetalhes(this)"
           >
             Ver Detalhes
           </button>
@@ -127,7 +125,6 @@
             class="btn btn-details"
             aria-expanded="false"
             aria-controls="detalhes-recorrente2"
-            onclick="toggleDetalhes(this)"
           >
             Ver Detalhes
           </button>
@@ -168,7 +165,6 @@
           <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
         </a>
         <p>Telefone: (91) 98507-5536</p>
-        <!-- Aqui você pode adicionar formulário de contato, mapa, etc -->
       </div>
     </section>
   </main>
@@ -179,6 +175,32 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <!-- ✅ Script necessário para o botão funcionar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const detailButtons = document.querySelectorAll(".btn-details");
+
+      detailButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const detalhesId = button.getAttribute("aria-controls");
+          const detalhesEl = document.getElementById(detalhesId);
+
+          if (!detalhesEl) return;
+
+          const isHidden = detalhesEl.hasAttribute("hidden");
+
+          if (isHidden) {
+            detalhesEl.removeAttribute("hidden");
+            button.setAttribute("aria-expanded", "true");
+            button.textContent = "Ocultar Detalhes";
+          } else {
+            detalhesEl.setAttribute("hidden", "");
+            button.setAttribute("aria-expanded", "false");
+            button.textContent = "Ver Detalhes";
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
