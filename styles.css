@@ -14,7 +14,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Botões - melhoria visual */
+.btn-details {
+  background-color: #444;
+  color: #fff;
+  align-self: start;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.btn-details:hover,
+.btn-details:focus {
+  background-color: #666;
+  transform: scale(1.05);
+  outline: none;
+}
+
+.btn-details[aria-expanded="true"] {
+  background-color: #28a745; /* verde para indicar que os detalhes estão visíveis */
+}
+
+.btn-details[aria-expanded="false"] {
+  background-color: #dc3545; /* vermelho para indicar que os detalhes estão ocultos */
+}
 /* Contêiner centralizado */
 .container {
   max-width: 1200px;
