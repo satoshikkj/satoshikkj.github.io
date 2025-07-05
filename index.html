@@ -8,6 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Evita execução de scripts externos e protege contra XSS -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; font-src 'self';">
+
+  <!-- Evita clickjacking -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+
+  <!-- Evita detecção de tipo de conteúdo errado -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- Controla o que é enviado no cabeçalho Referer -->
+  <meta name="referrer" content="no-referrer">
+
+  <!-- Define a política de permissões (API de câmera, microfone, etc) -->
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -174,7 +189,6 @@
           <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
         </a>
         <p>Telefone: (91) 98507-5536</p>
-        <!-- Aqui você pode adicionar formulário de contato, mapa, etc -->
       </div>
     </section>
   </main>
