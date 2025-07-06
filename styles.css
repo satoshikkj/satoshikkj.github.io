@@ -1,3 +1,50 @@
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #444;
+  transition: background 0.3s ease;
+}
+
+.social-btn svg {
+  vertical-align: middle;
+  fill: #fff;
+}
+
+.social-btn:hover {
+  background-color: #222;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1DA851;
+}
+
+.instagram-btn {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.instagram-btn:hover {
+  opacity: 0.9;
+}
+
 /* styles.css */
 
 /* Redefinir e base */
@@ -380,4 +427,4 @@ main {
   margin-top: 1rem;
   font-weight: 600;
   color: #25d366;
-    }
+}
