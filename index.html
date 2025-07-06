@@ -18,9 +18,8 @@
   ">
   <meta http-equiv="X-Frame-Options" content="DENY" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload" />
   <meta name="referrer" content="no-referrer" />
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
   <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
@@ -200,7 +199,6 @@
       <p>&copy; 2025 InterFit Academia. Todos os direitos reservados.</p>
     </div>
   </footer>
-
 ...
 
   <script>
@@ -233,19 +231,50 @@
   });
   </script>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const detailButtons = document.querySelectorAll(".btn-details");
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyCEaEVlQ-cZ5UR1_sVXy-bEUZpTWhARvY4",
-      authDomain: "interfit-bc.firebaseapp.com",
-      projectId: "interfit-bc",
-      storageBucket: "interfit-bc.firebasestorage.app",
-      messagingSenderId: "469488082598",
-      appId: "1:469488082598:web:282e75e83a00429e635e67"
-    };
+    detailButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const detalhesId = button.getAttribute("aria-controls");
+        const detalhesEl = document.getElementById(detalhesId);
 
-    const app = initializeApp(firebaseConfig);
-  </script>
+        if (!detalhesEl) {
+          console.warn(`Elemento com id '${detalhesId}' não encontrado.`);
+          return;
+        }
+
+        const isHidden = detalhesEl.hasAttribute("hidden");
+
+        if (isHidden) {
+          detalhesEl.removeAttribute("hidden");
+          button.setAttribute("aria-expanded", "true");
+          button.textContent = "Ocultar Detalhes";
+        } else {
+          detalhesEl.setAttribute("hidden", "");
+          button.setAttribute("aria-expanded", "false");
+          button.textContent = "Ver Detalhes";
+        }
+      });
+    });
+  });
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCEaEVlQ-cZ5UR1_sVXy-bEUZpTWhARvY4",
+    authDomain: "interfit-bc.firebaseapp.com",
+    projectId: "interfit-bc",
+    storageBucket: "interfit-bc.firebasestorage.app",
+    messagingSenderId: "469488082598",
+    appId: "1:469488082598:web:282e75e83a00429e635e67"
+  };
+
+  const app = initializeApp(firebaseConfig);
+</script>
+
 </body>
 </html>
