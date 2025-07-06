@@ -1,3 +1,4 @@
+/* ===== Botões sociais ===== */
 .social-buttons {
   display: flex;
   gap: 1rem;
@@ -45,9 +46,7 @@
   opacity: 0.9;
 }
 
-/* styles.css */
-
-/* Redefinir e base */
+/* ===== Reset e base ===== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -62,7 +61,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Botões - melhoria visual */
+/* ===== Botões gerais ===== */
 .btn {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -96,11 +95,11 @@ body {
 }
 
 .btn-details[aria-expanded="true"] {
-  background-color: #28a745; /* verde para indicar que os detalhes estão visíveis */
+  background-color: #28a745;
 }
 
 .btn-details[aria-expanded="false"] {
-  background-color: #dc3545; /* vermelho para indicar que os detalhes estão ocultos */
+  background-color: #dc3545;
 }
 
 .btn-whatsapp {
@@ -118,14 +117,14 @@ body {
   font-size: 1.2rem;
 }
 
-/* Contêiner centralizado */
+/* ===== Contêiner centralizado ===== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* Cabeçalho */
+/* ===== Cabeçalho ===== */
 .site-header {
   background-color: #d3d3d3;
   position: fixed;
@@ -148,7 +147,7 @@ body {
   width: auto;
 }
 
-/* Navegação */
+/* ===== Navegação ===== */
 .main-nav .nav-list {
   list-style: none;
   display: flex;
@@ -175,12 +174,11 @@ body {
   outline-offset: 3px;
 }
 
-/* Espaço para não ficar coberto pelo cabeçalho fixo */
 main {
   padding-top: 80px;
 }
 
-/* Hero / Banner */
+/* ===== Hero Section ===== */
 .hero-section {
   position: relative;
   text-align: center;
@@ -229,7 +227,7 @@ main {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-/* Seção Planos */
+/* ===== Seção de Planos ===== */
 .plans-section {
   background-color: #111;
   padding: 3rem 0 4rem;
@@ -245,7 +243,6 @@ main {
   letter-spacing: 2px;
 }
 
-/* Cartões de planos */
 .plan-card {
   background-color: #1a1a1a;
   border-radius: 12px;
@@ -335,7 +332,7 @@ main {
   display: none;
 }
 
-/* Seção Contato */
+/* ===== Contato ===== */
 .contact-section {
   padding: 3rem 0;
   background-color: #111;
@@ -348,7 +345,7 @@ main {
   margin: 1rem 0 1.5rem;
 }
 
-/* Rodapé */
+/* ===== Rodapé ===== */
 .site-footer {
   background-color: #111;
   color: #666;
@@ -358,7 +355,7 @@ main {
   border-top: 1px solid #222;
 }
 
-/* Layout responsivo */
+/* ===== Responsivo ===== */
 @media (min-width: 768px) {
   .plans-section .container {
     display: grid;
@@ -390,7 +387,7 @@ main {
   }
 }
 
-/* Seção Depoimentos */
+/* ===== Depoimentos ===== */
 .testimonials-section {
   background-color: #000;
   padding: 4rem 1.5rem;
@@ -428,3 +425,34 @@ main {
   font-weight: 600;
   color: #25d366;
 }
+
+/* ===== Botões SVG adicionais (ícones sociais) ===== */
+.svg-icons a.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.svg-icons a.btn svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.svg-icons a.btn:first-child {
+  background-color: #25D366;
+}
+
+.svg-icons a.btn:last-child {
+  background-color: #C13584;
+}
+
+.svg-icons a.btn:hover {
+  opacity: 0.85;
+  }
