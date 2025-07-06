@@ -74,7 +74,6 @@
     <section id="planos" class="plans-section" role="region" aria-label="Planos disponíveis">
       <div class="container">
         <h2 class="section-title">Escolha seu plano hoje!</h2>
-
         <article class="plan-card" role="article" aria-labelledby="plano-anual">
           <h3 id="plano-anual" class="plan-title">Plano Anual</h3>
           <p class="plan-price">R$147,00 <span class="per-month">por mês</span></p>
@@ -88,33 +87,18 @@
             Ver Detalhes
           </button>
 
-          <div class="social-buttons">
-  <a
-    href="https://wa.me/5591985075536"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn social-btn whatsapp-btn"
-    aria-label="Conversar via WhatsApp"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12.04 2.004C6.527 2.004 2 6.537 2 12.06c0 1.91.498 3.7 1.36 5.28L2 22l4.76-1.24a10.02 10.02 0 005.28 1.32c5.513 0 10.04-4.527 10.04-10.04 0-5.523-4.527-10.04-10.04-10.04zm.02 17.92c-1.58 0-3.07-.41-4.38-1.13l-.31-.17-2.84.74.76-2.78-.18-.3A8.04 8.04 0 014.04 12.06c0-4.42 3.6-8.02 8.02-8.02 4.42 0 8.02 3.6 8.02 8.02s-3.6 8.02-8.02 8.02zm4.35-5.96c-.23-.12-1.37-.67-1.58-.75-.21-.08-.36-.12-.5.12-.15.23-.57.75-.7.9-.13.15-.26.17-.48.06-.23-.12-.97-.36-1.85-1.15-.68-.61-1.14-1.37-1.27-1.6-.13-.23-.01-.36.11-.48.11-.11.23-.26.35-.38.12-.12.15-.21.23-.35.08-.15.04-.27-.02-.38-.06-.12-.5-1.21-.69-1.66-.18-.44-.36-.38-.5-.39-.13 0-.28 0-.43 0-.15 0-.38.05-.57.27-.19.23-.75.73-.75 1.77s.77 2.06.88 2.2c.11.15 1.51 2.29 3.66 3.21.51.22.9.36 1.21.46.51.16.97.14 1.33.09.41-.06 1.26-.51 1.44-1 .18-.48.18-.9.12-1-.06-.09-.21-.15-.44-.26z"/>
-    </svg>
-    WhatsApp
-  </a>
+          <!-- Botão "Eu Quero" adicionado aqui -->
+          <a
+            href="https://wa.me/5591985075536"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            aria-label="Entrar em contato pelo WhatsApp para o Plano Anual"
+          >
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Eu Quero
+          </a>
 
-<a
-  href="https://www.instagram.com/interfitbc?igsh=MW83d25lY2hpaGt2dA=="
-  target="_blank"
-  rel="noopener noreferrer"
-  class="btn social-btn instagram-btn"
-  aria-label="Visitar Instagram da InterFit"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zM4 7.75C4 5.679 5.679 4 7.75 4h8.5C18.321 4 20 5.679 20 7.75v8.5c0 2.071-1.679 3.75-3.75 3.75h-8.5C5.679 20 4 18.321 4 16.25v-8.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-2a1 1 0 100 2 1 1 0 000-2z"/>
-    </svg>
-    Instagram
-  </a>
-          </div>
+          <!-- Os SVGs foram removidos daqui conforme pedido -->
 
           <div id="detalhes-anual" class="plan-details" hidden>
             <p><strong>Vigência:</strong> Duração de 12 meses</p>
@@ -127,7 +111,6 @@
             </ul>
           </div>
         </article>
-
         <article class="plan-card" role="article" aria-labelledby="plano-recorrente1">
           <h3 id="plano-recorrente1" class="plan-title">Plano Recorrente</h3>
           <p class="plan-price">R$177,00 <span class="per-month">por mês</span></p>
@@ -198,6 +181,17 @@
     <section id="contato" class="contact-section" role="region" aria-label="Formulário e informações de contato">
       <div class="container">
         <h2 class="section-title">Fale Conosco</h2>
+
+        <!-- SVGs adicionados abaixo do título -->
+        <div class="svg-icons" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#25D366" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2.004C6.527 2.004 2 6.537 2 12.06c0 1.91.498 3.7 1.36 5.28L2 22l4.76-1.24a10.02 10.02 0 005.28 1.32c5.513 0 10.04-4.527 10.04-10.04 0-5.523-4.527-10.04-10.04-10.04zm.02 17.92c-1.58 0-3.07-.41-4.38-1.13l-.31-.17-2.84.74.76-2.78-.18-.3A8.04 8.04 0 014.04 12.06c0-4.42 3.6-8.02 8.02-8.02 4.42 0 8.02 3.6 8.02 8.02s-3.6 8.02-8.02 8.02zm4.35-5.96c-.23-.12-1.37-.67-1.58-.75-.21-.08-.36-.12-.5.12-.15.23-.57.75-.7.9-.13.15-.26.17-.48.06-.23-.12-.97-.36-1.85-1.15-.68-.61-1.14-1.37-1.27-1.6-.13-.23-.01-.36.11-.48.11-.11.23-.26.35-.38.12-.12.15-.21.23-.35.08-.15.04-.27-.02-.38-.06-.12-.5-1.21-.69-1.66-.18-.44-.36-.38-.5-.39-.13 0-.28 0-.43 0-.15 0-.38.05-.57.27-.19.23-.75.73-.75 1.77s.77 2.06.88 2.2c.11.15 1.51 2.29 3.66 3.21.51.22.9.36 1.21.46.51.16.97.14 1.33.09.41-.06 1.26-.51 1.44-1 .18-.48.18-.9.12-1-.06-.09-.21-.15-.44-.26z"/>
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#C13584" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zM4 7.75C4 5.679 5.679 4 7.75 4h8.5C18.321 4 20 5.679 20 7.75v8.5c0 2.071-1.679 3.75-3.75 3.75h-8.5C5.679 20 4 18.321 4 16.25v-8.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-2a1 1 0 100 2 1 1 0 000-2z"/>
+          </svg>
+        </div>
         <p>Estamos prontos para te ajudar! Entre em contato via WhatsApp.</p>
         <a
           href="https://wa.me/5591985075536"
